@@ -1,1 +1,41 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.Rainbow{
+    font-family: 'Roboto Mono', monospace;
+    background: linear-gradient(to right,#ff0000,#f39800,#ffff00,#00ff00,#138ae6,#0000ff,#ff00e6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    display: inline-block;
+}
+.loop02 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    overflow: hidden;
+}
+.loop02__box {
+    display: flex;
+    animation: loop-list 50s linear infinite;
+}
+.loop02__item a {
+    width: calc(100vw / 4);
+    display: block;
+}
+.loop02__item img {
+    width: 100%;
+}
+
+
+@keyframes loop-list {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.loop02:hover .loop02__box {
+    animation-play-state: paused;
+}
